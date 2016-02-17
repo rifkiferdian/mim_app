@@ -15,15 +15,25 @@ Route::get('/', function () {
     return redirect('auth/login');
 });
 
+// Dashboard :P
+Route::get('dashboard', 'DashboardController@index');
 
-Route::get('dashboard', function () {
-	if (Auth::guest()) {
-		return Redirect::to('auth/login');
-	}else{
-    	echo "<h1>Welcome Dashboard</h1>";
-	}
-});
 
+// List santri yang di seleksi...
+Route::get('seleksi', 'SeleksiController@index');
+Route::get('profile_seleksi/{id}', 'SeleksiController@profile');
+Route::get('add_seleksi', 'SeleksiController@add_seleksi');
+Route::post('add_seleksi/add', 'SeleksiController@create');
+Route::get('delete_user_seleksi/{id}', 'SeleksiController@destroy');
+
+//soal buat calon santri baru
+Route::get('soal_seleksi', 'SoalSeleksiController@index');
+
+
+//visi-misi
+Route::get('visi_misi',"VisiMisiController@index");
+
+// Login Routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');

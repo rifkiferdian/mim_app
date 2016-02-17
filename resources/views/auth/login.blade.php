@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentallela Alela! | </title>
+    <title>Login New Mim App | </title>
 
     <!-- Bootstrap core CSS -->
 
@@ -45,6 +45,13 @@
         <div id="wrapper">
             <div id="login" class="animate form">
                 <section class="login_content">
+                @if (count($errors) > 0)
+                     <div class="alert alert-danger">
+                        @foreach ($errors->all() as $error)
+                            <div>{!! $error !!}</div>
+                        @endforeach
+                    </div>
+                @endif              
                     <form method="POST" action="/auth/login">
                     {!! csrf_field() !!}
                         <h1>Login Form</h1>
