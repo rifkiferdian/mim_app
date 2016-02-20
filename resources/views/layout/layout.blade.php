@@ -86,9 +86,9 @@
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="/visi_misi">Visi Misi</a>
                                         </li>
-                                        <li><a href="#">Stuktur Organisasi</a>
+                                        <li><a href="/struktur">Stuktur Organisasi</a>
                                         </li>
-                                        <li><a href="#">Aturan Podok</a>
+                                        <li><a href="/aturan">Aturan Podok</a>
                                         </li>
                                         <li><a href="#">Program</a>
                                         </li>

@@ -16,7 +16,7 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Visi - Misi</h3>
+                            <h3>Struktur Organisasi</h3>
                         </div>
 
                         <div class="title_right">
@@ -59,21 +59,23 @@
                                         @foreach ($data as $row)
                                         <div class="panel">
                                             <a class="panel-heading collapsed" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo{{ $row->id }}" aria-expanded="false" aria-controls="collapseTwo{{ $row->id }}">
-                                                <h4 class="panel-title">{{ $row->visi }}</h4>
+                                                <h4 class="panel-title">{{ $row->posisi }}</h4><i>PIC : {{ $row->pic }}</i>
                                             </a>
                                             <div id="collapseTwo{{ $row->id }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                                 <div class="panel-body">
                                                    <table class="table table-striped">
                                                         <thead>
                                                             <tr>
-                                                                <th style="width: 50%;">Misi Pondok Programmer</th>
-                                                                <th style="text-align: center;">Parameter {{ $row->visi }}</th>
+                                                                <th style="text-align: center;">HAK</th>
+                                                                <th style="text-align: center;">KEWAJIBAN</th>
+                                                                <th style="text-align: center;">KETENTUAN LAIN</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <th><?php echo nl2br($row->misi);  ?>  </th>
-                                                                <td><?php echo nl2br($row->param);  ?></td>
+                                                                <td><?php echo nl2br($row->hak);  ?></td>
+                                                                <td><?php echo nl2br($row->kewajiban);  ?></td>
+                                                                <td><?php echo nl2br($row->ketentuan_lain);  ?></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>

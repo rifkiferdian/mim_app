@@ -33,6 +33,12 @@ Route::get('soal_seleksi', 'SoalSeleksiController@index');
 //visi-misi
 Route::get('visi_misi',"VisiMisiController@index");
 
+//Struktur Organisasi
+Route::get('struktur',"StrukturOrgaisasiController@index");
+
+//Aturan Pondok
+// Route::get('struktur',"AturanPondokController@index");
+
 // Login Routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
